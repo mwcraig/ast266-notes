@@ -1,0 +1,59 @@
+#duskflats 2021-09-18-flats.txt
+
+#waituntil 1, 01:00:00
+;
+; === Target Bias (20@bin1) ===
+;
+
+#repeat 1
+#count 20
+#interval 0
+#binning 1
+#bias
+
+;
+; === Target Dark (20x90sec@bin1) ===
+;
+#repeat 1
+#count 20
+#interval 90
+#binning 1
+#dark
+
+
+#autofocus
+;
+;
+; === Target M57 ===
+;
+#repeat 7
+#count 1,1,1
+#filter B,gp,rp
+#interval 120,90,90
+#binning 1,1,1
+M57	18:53:35.08	+33:01:45.0
+
+#autofocus
+;
+;
+; === Target NGC 6946 ===
+;
+#repeat 7
+#count 1,1,1
+#filter B,gp,rp
+#interval 120,90,90
+#binning 1,1,1
+NGC-6946	20:34:52.33	+60:09:13.2
+
+#autofocus
+;
+;
+; === Target M15 ===
+;
+#repeat 7
+#count 1,1,1
+#filter B,gp,rp
+#interval 120,90,90
+#binning 1,1,1
+m15	21:29:58.33	+12:10:01.2
+

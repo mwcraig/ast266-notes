@@ -1,0 +1,83 @@
+;
+; === Target Bias (20@bin1) ===
+;
+
+#repeat 1
+#count 20
+#interval 0
+#binning 1
+#bias
+
+;
+; === Target Dark (20x90sec@bin1) ===
+;
+#repeat 1
+#count 20
+#interval 90
+#binning 1
+#dark
+
+
+#autofocus
+;
+;
+; === Target M27 ===
+;
+#repeat 7
+#count 1,1,1
+#filter B,gp,rp
+#interval 120,90,90
+#binning 1,1,1
+m27	19:59:36.340	22:43:16.09
+
+#autofocus
+;
+;
+; === Target M32 ===
+;
+#repeat 7
+#count 1,1,1
+#filter B,gp,rp
+#interval 120,90,90
+#binning 1,1,1
+m32	00:42:41.8	40:51:55
+
+#autofocus
+;
+;
+; === Target M33 ===
+;
+#repeat 7
+#count 1,1,1
+#filter B,gp,rp
+#interval 120,90,90
+#binning 1,1,1
+m33	01:33:50.02	30:39:36.7
+
+#autofocus
+;
+;
+; === Target M52 ===
+;
+#repeat 7
+#count 1,1,1
+#filter B,gp,rp
+#interval 120,90,90
+#binning 1,1,1
+m52	23:24:48 	61:35:36
+
+
+#autofocus
+;
+;
+; === Target M74 ===
+;
+#repeat 7
+#count 1,1,1
+#filter B,gp,rp
+#interval 120,90,90
+#binning 1,1,1
+m74	01:36:41.8 	15:47:01
+
+#quitat 9/15/2021 07:10:00
+#chain 2021-09-14-02-kelt-1.txt
