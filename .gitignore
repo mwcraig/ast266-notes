@@ -1,3 +1,6 @@
 .ipynb_checkpoints
 __pycache__/
 HTML/
+# pixi environments
+.pixi/*
+!.pixi/config.toml
