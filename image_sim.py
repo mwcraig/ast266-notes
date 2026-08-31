@@ -3,8 +3,8 @@ import os
 import numpy as np
 
 from astropy.modeling.models import Gaussian2D, RickerWavelet2D, Const2D
-from photutils.datasets import (make_random_gaussians_table,
-                                make_gaussian_sources_image)
+from photutils.datasets import (make_random_models_table,
+                                make_model_image)
 from photutils.aperture import EllipticalAperture
 
 # To use a seed, set it in the environment. Useful for minimizing changes when
@@ -175,10 +175,11 @@ def stars(image, number, max_counts=10000, gain=1, fwhm=4):
                    ('y_stddev', ystddev_range),
                    ('theta', [0, 2 * np.pi])])
 
-    sources = make_random_gaussians_table(number, params,
-                                          seed=12345)
+    sources = make_random_models_table(number, params,
+                                       seed=12345)
 
-    star_im = make_gaussian_sources_image(image.shape, sources)
+    star_im = make_model_image(image.shape, Gaussian2D(), sources,
+                               x_name='x_mean', y_name='y_mean')
 
     return star_im
 
