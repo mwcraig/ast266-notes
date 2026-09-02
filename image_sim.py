@@ -292,7 +292,12 @@ def add_donuts(image, number=20):
                                       amplitude=amplitude)
         donut_im += donut_model(x, y)
 
-    donut_im /= number
+    # Each donut model is 1 + (a dip), so summing ``number`` of them gives
+    # ``number`` + (all the dips). Subtract the extra constants so the
+    # result is 1 + (all the dips), i.e. each donut keeps its full depth.
+    # (Dividing by ``number`` instead would average every donut down to
+    # 1/number of its depth, making them essentially invisible.)
+    donut_im -= (number - 1)
 
     return donut_im
 
